@@ -1,7 +1,9 @@
 describe('Category Filters', () => {
-  it.skip('Insert test here');
+    it('Should have all filter enabled when all the checkboxs are unchecked', () => {
+        cy.visit('');
+    })
 
-  it.skip('Insert test here');
-
-  it.skip('Insert test here');
+    it('Race name should updated after deselect filer', () => {
+        cy.visit('');
+    })
 });

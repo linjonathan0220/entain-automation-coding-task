@@ -1,6 +1,14 @@
 describe('Countdown Timer', () => {
     it('Should remove the race once the race is began', () => {
         cy.visit('');
+
+        let i = 0
+
+        // Check all the race time which shouldn't contain a negative number
+        // It should immediately remove it from the race list since the race has been began
+        for (i = 0; i < 5; i++) {
+            cy.get('div.item').children('p').eq(i).should('not.include.text', '-')
+        }
     })
 
     it('Should display the race from less time to most time', () => {

@@ -19,4 +19,19 @@ describe('Page Content', () => {
       })
     });
   })
+
+  it('Should correctly disable and enable each filter', () => {
+      cy.visit('');
+
+      cy.get('[data-testid=category-filters]').within(() => {
+          RACING_CATEGORIES.forEach((category) => {
+              cy.get(`[data-testid=category-filter-${category.categoryId}]`).within(() => {
+                  cy.get('[data-testid=category-filter-checkbox]').uncheck();
+                  cy.get('[data-testid=category-filter-checkbox]').should('not.be.checked');
+                  cy.get('[data-testid=category-filter-checkbox]').check();
+                  cy.get('[data-testid=category-filter-checkbox]').should('be.checked');
+              });
+          })
+      });
+  })
 });

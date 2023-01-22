@@ -39,5 +39,11 @@ describe('Countdown Timer', () => {
 
     it('Should count down as expected by 1 sec each time', () => {
         cy.visit('');
+
+        // Convert the time into sec and divide by 60 to find out how many minute left
+        // Store the current time to a varible
+        // Make it wait for 5 seconds
+        // Compare the previous time and new time
+        // Add accertion to make sure that new time has reduced 5 seconds 
     })
 });

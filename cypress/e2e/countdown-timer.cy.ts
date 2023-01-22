@@ -37,10 +37,6 @@ describe('Countdown Timer', () => {
         // Add an accertion to verify the time format should be display
     })
 
-    it('Should display in second after 1 min', () => {
-        cy.visit('');
-    })
-
     it('Should count down as expected by 1 sec each time', () => {
         cy.visit('');
     })

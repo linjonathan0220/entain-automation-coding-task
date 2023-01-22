@@ -43,4 +43,5 @@ describe('Countdown Timer', () => {
 
     it('Should count down as expected by 1 sec each time', () => {
         cy.visit('');
+    })
 });

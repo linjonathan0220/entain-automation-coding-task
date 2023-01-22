@@ -28,11 +28,11 @@ describe('Countdown Timer', () => {
         cy.wrap(racetime1).should('equal', racetime1.sort())
     })
 
-    it('Should display in Minute and Second when time is lower than 5 mins', () => {
+    it('Should display correct time format when less than 5 mins and less than 1 mins', () => {
         cy.visit('');
 
         // Convert the time into sec and divide by 60 to find out how many minute left
-        // Checking the minute is greater/lower than 5 mins
+        // Checking the minute is greater/lower than 1 or 5 mins
         // Use If else for conditional test
         // Add an accertion to verify the time format should be display
     })
